@@ -1,0 +1,27 @@
+ALGORITHM tableaux
+VAR
+sum INTEGER
+    tab1 :array_name : ARRAY_OF INTEGER[5];
+    tab2 :array_name : ARRAY_OF INTEGER[5];
+    tab3 :array_name : ARRAY_OF INTEGER[5];
+BEGIN
+    tab1:={1,5,14,3,6}
+    tab2:={4,5,14,2,3}
+    write("print array1" tab1);
+        write("print array2" tab2);
+        FOR i FROM 0 TO 4 STEP 1  DO
+        FOR j FROM 0 TO 4 STEP 1  DO
+            IF (tab1[i]=tab2[j]) THEN
+                tab3[i]=tab1[i]
+            END_IF
+        END_FOR
+        END_FOR
+        sum:=0
+        FOR i FROM 0 TO 5 STEP 1 DO
+            sum := sum + tab3[i]
+        END_FOR
+        write(sum)
+
+
+    
+END
